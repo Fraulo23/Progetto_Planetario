@@ -28,12 +28,12 @@ namespace Progetto_Planetario
         public void DisegnaPlanetario()
         {
             Graphics g = this.CreateGraphics();
-            if (scia == 1)
+            if (scia == 1) //per togliere la scia dei pianeti
             {
                 this.BackgroundImage = (System.Drawing.Image)BackgroundImage.Clone();
                 
             }
-            foreach (Pianeta pianeta in planetario.Pianeti)
+            foreach (Pianeta pianeta in planetario.Pianeti) //disegna ogni pianeta
             {
                 Color cPianeta = Color.FromName(pianeta.Colore);
                 Brush brush = new SolidBrush(cPianeta);
@@ -47,7 +47,7 @@ namespace Progetto_Planetario
         }
         private void Cronometro_Tick(object sender, EventArgs e)
         {
-            for (int i = 0; i < 500; i++)
+            for (int i = 0; i < 500; i++) //ogni tick aggiorna 500 volte le posizioni e la velocità dei pianeti
             {
                 planetario.Move();
             }
