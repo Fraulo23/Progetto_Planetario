@@ -19,6 +19,15 @@ namespace Progetto_Planetario
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Pianeta p1= new Pianeta(1000,new Vector(0,0),new Vector(300,450),"Orange");
+            lstPianeti.Items.Add(p1);
+            planetario.Pianeti.Add(p1);
+            Pianeta p2 = new Pianeta(5000, new Vector(2, -2), new Vector(500, 650), "red");
+            lstPianeti.Items.Add(p2);
+            planetario.Pianeti.Add(p2);
+            Pianeta p3 = new Pianeta(600, new Vector(1, 1), new Vector(350, 200), "yellow");
+            lstPianeti.Items.Add(p3);
+            planetario.Pianeti.Add(p3);
             DisegnaPlanetario();
         }
         Planetario planetario = new Planetario();
@@ -108,6 +117,7 @@ namespace Progetto_Planetario
             {
                 MessageBox.Show("Nessun elemento è stato selezionato");
             }
+            
         }
     }
 }
